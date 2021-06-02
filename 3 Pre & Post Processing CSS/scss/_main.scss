@@ -1,0 +1,242 @@
+// Write your styles here
+
+$primaryFont: "Source Sans Pro", sans-serif;
+$secondaryFont: "Hind", sans-serif;
+$extraFont: "Fresca", sans-serif;
+
+@mixin btn($hght, $c, $bgc, $w) {
+  height: $hght;
+  color: $c;
+  width: $w;
+  background-color: $bgc;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+@mixin lnk($c) {
+  color: $c;
+  font-weight: bold;
+}
+
+$map: (
+"widthHeader": 256px,
+"widthHeaderMainTop": 164px,
+"widthHeaderMainBottom": 68px,
+"leftHeader":-6px,
+"leftHeaderMainTop": 192px,
+"leftHeaderMainBottom": 134px,
+"topHeader": 71px,
+"topHeaderMainTop": 6px,
+"topHeaderMainBottom": 4px,
+"height": 42px
+);
+
+
+%flexPosition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%wordBlock {
+  content: "";
+  position: absolute;
+  background: $highlight;
+  z-index: -1;
+}
+
+%logo {
+  img {
+    float: left;
+    margin-right: 7px;
+  }
+  p {
+    font-size: 30px;
+    margin: 0 60px;
+    letter-spacing: 3px;
+    font-family: $extraFont;
+  }
+  span {
+    display: block;
+    font-size: 15px;
+    margin-left: 3px;
+    letter-spacing: 0.5px;
+  }
+}
+
+body {
+  color: $primaryFontColor;
+  width: 90%;
+  min-width: 50%;
+  margin: 0 auto;
+  max-width: 1600px;
+  
+}
+
+.header {
+  font-family: $secondaryFont;
+  background-color: $sectionBgColor;
+  font-size: 20px;
+  min-height: 250px;
+  
+
+  .header-wrap {
+   max-height: 670px;
+    background-image: url($headerImage);
+    background-size: 100% 125%;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 45%;
+    padding: 10px 100px 110px 100px;
+  }
+
+  .landing-logo {
+    @extend %logo;
+  }
+
+  .header_heading {
+    max-width: 35%;
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 60px;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      @extend %wordBlock;
+      
+      left: map-get($map, "leftHeader");
+      top: map-get($map, "topHeader");
+      width: map-get($map, "widthHeader");
+      height: map-get($map, "height");
+    }
+  }
+
+  .header_text {
+    max-width: 40%;
+    margin-bottom: 3rem;
+  }
+
+  button.header_button {
+    margin-right: 250px;
+    @include btn(3rem, white, $btnColor, 8rem);
+  }
+
+  a.login {
+    @include lnk(white);
+  }
+}
+
+.section {
+  font-family: $secondaryFont;
+  @extend %flexPosition;
+  flex-direction: column;
+  background-color: $sectionBgColor;
+
+  .section_text {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 25px auto;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      @extend %wordBlock;
+      left: map-get($map, "leftHeaderMainTop");
+      top: map-get($map, "topHeaderMainTop");
+      width: map-get($map, "widthHeaderMainTop");
+      height: map-get($map, "height");
+    }
+  }
+
+  .section_card_wrap {
+    max-width: 60%;
+    font-size: 20px;
+    line-height: 35px;
+
+    .section_card {
+      @extend %flexPosition;
+      flex-direction: row;
+      background-color: $cardColor;
+      margin-bottom: 2rem;
+      color: white;
+      padding: 1rem;
+      border-radius: 5px;
+
+      .section_card_img {
+        min-width: 30%;
+      }
+
+      .section_card_right_container {
+        @extend %flexPosition;
+        flex-direction: column;
+        margin: 0 70px 0 70px;
+
+        .section_card_heading {
+          font-size: larger;
+          font-weight: bold;
+        }
+
+        .section_link {
+          @include lnk(white);
+        }
+      }
+    }
+  }
+
+  .section_banner {
+    width: 55%;
+    @extend %flexPosition;
+    padding: 0 5rem 1rem 5rem;
+
+    background: linear-gradient(to right, $gradientLeft, $gradientRight);
+    border-radius: 5px;
+    transform: translateY(50%);
+  
+
+    .section_banner_heading {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+
+      &::before {
+        @extend %wordBlock;
+        left: map-get($map, "leftHeaderMainBottom");
+      top: map-get($map, "topHeaderMainBottom");
+      width: map-get($map, "widthHeaderMainBottom");
+      height: map-get($map, "height");
+      }
+    }
+    .section_banner_text {
+      color: white;
+    }
+
+    .section_banner_button {
+      @include btn(3rem, white, $btnColor, 8rem);
+    }
+  }
+}
+
+.footer {
+  background-color: $cardColor;
+  color: white;
+  font-size: 20px;
+  padding: 2% 10% 0 10%;
+  font-family: $secondaryFont;
+
+  .footer-wrap {
+    @extend %flexPosition;
+    min-height: 30vh;
+    position: relative;
+
+    .footer_logo {
+      @extend %logo;
+    }
+
+    .footer_text {
+      max-width: 40%;
+    }
+  }
+}

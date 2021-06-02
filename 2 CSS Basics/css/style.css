@@ -1,0 +1,172 @@
+/* 
+
+write your code here
+
+*/
+:root {
+    --grey: rgb(235, 235, 235);
+    --colorLight: rgba(255, 255, 255, 0.924);
+    --colorBlue: lightskyblue;
+}
+
+@media print {
+    .tm-content-box:not(.tm-content-header),
+    .tm-main-nav,
+    .blocks,
+    section::before {
+        display: none;
+    }
+
+    .flex-item > img {
+        width: 200px;
+        height: 200px;
+        margin-top: 5rem;
+    }
+
+    div.padding-medium.flex-item {
+        max-width: 22rem;
+    }
+
+    .flex-item.tm-team-description-container .tm-section-title {
+        color: blue;
+    }
+
+    #home > div.tm-banner {
+        border: 30px solid white;
+    }
+}
+
+p {
+    text-indent: 20px;
+    line-height: 2rem;
+}
+
+div.tm-content-box.flex-2-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tm-box-bg-title:hover {
+    background-color: var(--colorBlue);
+    color: var(--colorLight);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tm-box-bg-title {
+    transition: background-color 300ms ease;
+}
+
+p::first-letter {
+    font-size: 30px;
+    color: var(--colorBlue);
+}
+
+.gallery-container p::first-letter {
+    font-size: 30px;
+    color: black;
+}
+
+.gallery-container p {
+    text-indent: 0;
+}
+
+div.tm-banner {
+    padding: 0;
+    border: 30px solid var(--grey);
+}
+
+div.tm-banner,
+.tm-main-nav,
+.tm-content-box,
+#about,
+#ideas,
+.heading.tm-content-box,
+.blocks {
+    box-shadow: 0 0.2rem 1rem rgba(82, 82, 82, 0.671);
+}
+
+section {
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 0;
+    border-right: 250px solid transparent;
+    border-left: 0px solid var(--colorBlue);
+    border-top: 30px solid var(--colorBlue);
+}
+
+div.carousel-item.active h2 {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+h2 + p {
+    font-style: italic;
+}
+
+.padding-medium li:first-child::after,
+.padding-medium li:nth-child(3)::after {
+    content: 'New';
+    color: red;
+    font-size: small;
+    vertical-align: super;
+}
+
+.mandatory-field::after {
+    content: '*';
+    color: red;
+}
+
+.padding-medium a:visited {
+    text-decoration: underline;
+}
+
+.padding-medium a {
+    color: black;
+}
+
+.padding-medium a:hover {
+    color: var(--colorBlue);
+    text-decoration: none;
+    border-bottom: 4px double var(--colorBlue);
+}
+
+.blocks .gallery-container li:nth-child(even) {
+    border: 10px solid var(--grey);
+    background-color: var(--grey);
+}
+
+.blocks .gallery-container li:nth-child(odd) {
+    border: 10px solid white;
+}
+
+.submit-btn {
+    float: right;
+    align-items: flex-end;
+    margin: 1rem auto;
+    border-radius: 0;
+    color: var(--colorBlue);
+    border-color: var(--colorBlue);
+    height: 3.5rem;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 300ms ease, background-color 300ms ease;
+    width: 10rem;
+}
+
+.submit-btn:hover {
+    border-color: var(--colorBlue);
+    background-color: var(--colorBlue);
+}
+
+.tm-main-nav li:hover {
+    background-color: var(--grey);
+}

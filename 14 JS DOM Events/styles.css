@@ -1,0 +1,144 @@
+/* START: Task 1 Styles */
+.table-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+td {
+  padding: 1rem 3rem;
+  border: 1px solid grey;
+  width: 3rem;
+  height: 6rem;
+  border: 2px solid grey;
+}
+
+.table {
+  border-collapse: collapse;
+  border: 2px solid grey;
+  /* background-color: rgb(207, 199, 199); */
+}
+.green {
+  background-color: rgb(37, 173, 3);
+}
+
+.blue {
+  background-color: rgb(13, 57, 255);
+}
+
+.yellow {
+  background-color: rgb(255, 233, 31);
+}
+
+/* END: Task 1 Styles */
+
+/* START: Task 2 Styles */
+.form-wrapper {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-input {
+  box-sizing: border-box;
+  height: 3rem;
+  width: 14rem;
+  border-radius: 0%;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  outline: none;
+}
+
+.form-input:active {
+  border-radius: 0%;
+}
+
+.disabled-but {
+  height: 3rem;
+  width: 4rem;
+  box-sizing: border-box;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red-border {
+  border: 2px solid brown;
+}
+.massege-wrapper {
+  height: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.red {
+  background-color: brown;
+}
+.green {
+  background-color: rgb(91, 189, 26);
+}
+/* END: Task 2 Styles */
+
+/* START: Task 3 Styles */
+.coutr-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.coutr-wrapper img {
+  height: 330px;
+  width: 600px;
+
+}
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+#ball {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 280px;
+  top: 145px;
+  transition: 1s all;
+ 
+}
+.hoop-A, .hoop-B{
+    position: absolute;
+    width: 15px;
+  height: 15px;
+  top: 157px;
+
+}
+.hoop-A{
+    left: 32px;
+}
+.hoop-B{
+    left:552px;
+}
+
+.massages{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.score{
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    
+}
+/* END: Task 3 Styles */

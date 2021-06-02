@@ -1,0 +1,55 @@
+/* write your styles here */
+
+*{
+    font-family: serif;
+}
+
+.title-header{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.radio-wr, .serch-wr{
+display: flex;
+justify-content: center;
+}
+
+.input-wr{
+    display: flex;
+    flex-direction: column;
+}
+
+.table-head{
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgb(48, 190, 48);
+}
+
+.table-wrapper{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+td{
+    padding: 1rem 3rem;
+    border: 1px solid grey;
+}
+
+.table{
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+tbody tr:hover {
+    background: #d8ceb9; 
+     
+   }
+
+   .table_but{
+       background-color: transparent;
+       border: none;
+       cursor: pointer;
+       color: white;
+    font-size: 1.5rem;
+   }

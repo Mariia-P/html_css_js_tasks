@@ -1,0 +1,62 @@
+/* Your code goes here */
+
+html {
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Arsenal', sans-serif;
+}
+
+fieldset {
+    max-width: 500px;
+    margin: 30px auto 40px;
+    background-color: #eee;
+    margin-bottom: 15px;
+    
+}
+
+.noShow {
+display: none;
+}
+
+input
+ {
+    width: 100%;
+    padding: 7px 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 2px solid rosybrown;
+    
+    
+}
+button{
+    width: 40%;
+    padding: 7px 15px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    border: 2px solid rosybrown;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+}
+.unit-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+label {
+    margin-right: 15px;
+}
+label:last-of-type {
+    margin: 0;
+}
+textarea {
+    width: 100%;
+    resize: vertical;
+}
